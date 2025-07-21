@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -ex
 
 VER_ONEAPI=2025.0
 

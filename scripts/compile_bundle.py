@@ -194,7 +194,7 @@ def process(*args):
     # Update IPEX source code
     t0 = int(time.time() * 1000)
     update_source_code(SRCDIR,
-                       'https://github.com/intel/intel-extension-for-pytorch.git',
+                       'https://github.com/ticket20200616/intel-extension-for-pytorch.git',
                        args_ver_ipex,
                        basedir = BASEDIR,
                        show_command = args_verbose)
@@ -713,7 +713,7 @@ if __name__ == '__main__':
         assert args.ver_ipex != '', 'Argument --ver-ipex must be set to a branch/tag/commit of Intel® Extension for PyTorch* source code.'
         if os.path.isfile(utils_filepath):
             os.remove(utils_filepath)
-        url = f'https://github.com/intel/intel-extension-for-pytorch/blob/{urllib.parse.quote(args.ver_ipex)}/scripts/tools/compilation_helper/{UTILSFILENAME}'
+        url = f'https://github.com/ticket20200616/intel-extension-for-pytorch/blob/{urllib.parse.quote(args.ver_ipex)}/scripts/tools/compilation_helper/{UTILSFILENAME}'
         import subprocess
         p = subprocess.Popen('python -m pip install requests',
                      stdout = subprocess.PIPE,

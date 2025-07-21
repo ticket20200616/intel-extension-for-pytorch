@@ -173,7 +173,17 @@ def _check_env_flag(name, default=""):
     return os.getenv(name, default).upper().strip() in ON_ENV_VAL
 
 
+def _should(expr, msg=''):
+    if not expr:
+        if not msg:
+            msg = 'Expression unexpected!'
+        while True:
+            print(msg, file=sys.stderr, flush=True)
+            pass
+
+
 def get_build_type():
+    _should(_check_env_flag("DEBUG") or _check_env_flag("REL_WITH_DEB_INFO"), 'debug not set')
     return (
         "RelWithDebInfo"
         if _check_env_flag("REL_WITH_DEB_INFO")
