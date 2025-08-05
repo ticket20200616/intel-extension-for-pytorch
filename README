@@ -1,10 +1,10 @@
-IPEX GPU学习：
-1. 分派机制
-2. SYCL的启用
-3. SYCL在GPU上的扩展：本地向量化功能和矩阵计算功能
+IPEX GPU Learning:
 
-通过Pytorch分派机制实现的后端：virtd。
-virtd代表Virtual Device，即虚拟出来的一个设备，主要演示分派机制的使用。
-virtd的操作还是在CPU上进行，内存管理还是使用malloc/free。
+1. Dispatch Mechanism
+2. Enabling SYCL
+3. SYCL Extensions on GPU: Local Vectorization and Matrix Computation Features
 
-目前只实现了1，后面的2和3需逐步引入。
+Backend implemented through PyTorch dispatch mechanism: virtd.
+Virtd represents a Virtual Device, essentially a simulated device, primarily to demonstrate the use of the dispatch mechanism.
+Operations for virtd are still performed on the CPU, and memory management continues to use malloc/free.
+Currently, only item 1 is implemented; items 2 and 3 need to be gradually introduced.
