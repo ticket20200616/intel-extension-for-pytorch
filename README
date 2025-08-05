@@ -7,4 +7,4 @@ IPEX GPU Learning:
 Backend implemented through PyTorch dispatch mechanism: virtd.
 Virtd represents a Virtual Device, essentially a simulated device, primarily to demonstrate the use of the dispatch mechanism.
 Operations for virtd are still performed on the CPU, and memory management continues to use malloc/free.
-Currently, only item 1 is implemented; items 2 and 3 need to be gradually introduced.
+Currently, only step 1 is implemented; steps 2 and 3 need to be gradually introduced.
